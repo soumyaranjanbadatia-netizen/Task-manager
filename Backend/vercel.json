@@ -5,7 +5,13 @@
       "src": "server.js",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["routes/**", "config/**", "models/**"],
+        "includeFiles": [
+          "config/**",
+          "controllers/**",
+          "middleware/**",
+          "models/**",
+          "routes/**"
+        ],
         "runtime": "nodejs18.x"
       }
     }
@@ -17,7 +23,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "server.js"
     }
   ]
 }
